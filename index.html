@@ -83,14 +83,14 @@ async function activateXR() {
     scene.add(reticle);
   })
 
-  let flower;
-  loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function(gltf) {
-    flower = gltf.scene;
+  let cake;
+  loader.load("assets/cupcake/cupcake.gltf", function(gltf) {
+    cake = gltf.scene;
   });
 
   session.addEventListener("select", (event) => {
-    if (flower) {
-      const clone = flower.clone();
+    if (cake) {
+      const clone = cake.clone();
       clone.position.copy(reticle.position);
       scene.add(clone);
     }
