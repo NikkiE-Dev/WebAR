@@ -84,12 +84,11 @@ async function activateXR() {
   })
 
   let cake;
-  session.addEventListener("select", (event) => {
-    loader.load("https://github.com/NikkiE-Holberton/WebAR/tree/main/assets/dino/legendarygodzilla2014.glb", function(glb) {
-    cake = glb.scene;
+  loader.load("assets/cupcake/scene.gltf", function(gltf) {
+    cake = gltf.scene;
   });
 
-  
+  session.addEventListener("select", (event) => {
     if (cake) {
       const clone = cake.clone();
       clone.position.copy(reticle.position);
