@@ -14,7 +14,7 @@
 
 <!-- Starting an immersive WebXR session requires user interaction.
     We start this one with a simple button. -->
-<button onclick="activateXR()">Start Hello WebXR</button>
+<button onclick="activateXR()">Experience WebXR</button>
 <script>
 async function activateXR() {
   // Add a canvas element and initialize a WebGL context that is compatible with WebXR.
@@ -84,8 +84,8 @@ async function activateXR() {
   })
 
   let cake;
-  loader.load("https://github.com/NikkiE-Holberton/WebAR/tree/main/assets/dino/legendarygodzilla2014.glb", function(gltf) {
-    cake = gltf.scene;
+  loader.load("https://github.com/NikkiE-Holberton/WebAR/tree/main/assets/dino/legendarygodzilla2014.glb", function(glb) {
+    cake = glb.scene;
   });
 
   session.addEventListener("select", (event) => {
